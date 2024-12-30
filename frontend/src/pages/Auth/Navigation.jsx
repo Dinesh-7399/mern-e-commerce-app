@@ -39,38 +39,48 @@ const Navigation = () => {
           <span className="hidden nav-item-name mt-[3rem]">Home</span>
         </Link>
         <Link
-          to="/"
-          className="flex items-center transition-transform 
-transform hover:translate-x-2"
+          to="/shop"
+          className="flex items-center transition-transform transform hover:translate-x-2"
         >
           <AiOutlineShopping size={26} className="mr-2 mt-[3rem]" />
-          <span className="hidden nav-item-name mt-[3rem]">Shopping</span>
+          <span className="hidden nav-item-name mt-[3rem]">SHOP</span>
         </Link>
         <Link
-          to="/"
-          className="flex items-center transition-transform 
-transform hover:translate-x-2"
+          to="/cart"
+          className="flex items-center transition-transform transform hover:translate-x-2"
         >
           <AiOutlineShoppingCart size={26} className="mr-2 mt-[3rem]" />
-          <span className="hidden nav-item-name mt-[3rem]">Cart</span>
+          <span className="hidden nav-item-name mt-[3rem]">CART</span>
         </Link>
         <Link
-          to="/"
-          className="flex items-center transition-transform 
-transform hover:translate-x-2"
+          to="/favorite"
+          className="flex items-center transition-transform transform hover:translate-x-2"
         >
-          <AiOutlineLogin size={26} className="mr-2 mt-[3rem]" />
-          <span className="hidden nav-item-name mt-[3rem]">Login</span>
-        </Link>
-        <Link
-          to="/"
-          className="flex items-center transition-transform 
-m hover:translate-x-2"
-        >
-          <AiOutlineUserAdd size={26} className="mr-2 mt-[3rem]" />
-          <span className="hidden nav-item-name mt-[3rem]">User add</span>
+          <FaHeart size={26} className="mr-2 mt-[3rem]" />
+          <span className="hidden nav-item-name mt-[3rem]">Favorite</span>
         </Link>
       </div>
+      <ul>
+        <li>
+          <Link
+            to="/cart"
+            className="flex items-center transition-transform transform hover:translate-x-2"
+          >
+            <AiOutlineLogin size={26} className="mr-2 mt-[3rem]" />
+            <span className="hidden nav-item-name mt-[3rem]">Login</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/cart"
+            className="flex items-center transition-transform transform 
+hover:translate-x-2"
+          >
+            <AiOutlineUserAdd size={26} className="mr-2 mt-[3rem]" />
+            <span className="hidden nav-item-name mt-[3rem]">Register</span>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
