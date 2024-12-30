@@ -1,6 +1,9 @@
 import express from "express";
-import  createUser from "../controllers/user.controller.js";
+import { createUser  , getAllUsers, loginUser , logOutCurrectUser , getCurrentUserProfile} from "../controllers/user.controller.js";
 const router = express();
-router.route('/').post(createUser);
-
+import { authenticate , authorizeAdmin } from "../middlewares/auth.middleware.js";
+router.route('/').post(createUser).get(authenticate , authorizeAdmin , getAllUsers);
+router.post('/auth' , loginUser);
+router.post('/logout' , logOutCurrectUser);
+router.route('/profile').get(authenticate , getCurrentUserProfile);
 export default router;
